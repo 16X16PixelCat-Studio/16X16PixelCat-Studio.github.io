@@ -1,31 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 :root{
   --primary-color: #11121a;
   --hover-color: #272832;
   --accent-color: #0071FF;
   --text-color: #c9c9c9;
 }
-
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 html{
-    font-family: 'Press Start 2P';
+  font-family: "Press Start 2P", system-ui;
   color: var(--text-color);
   scroll-behavior: smooth; /*For bookmark links*/
 }
-
 body{
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    background-color: var(--primary-color);
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--primary-color);
 }
-
 main{
   padding: min(5em, 7%);
 }
@@ -140,89 +134,4 @@ nav a.accent-link{
   nav .home-li{
     margin-right: unset;
   }
-}
-
-button{
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    font-family: 'press start 2p';
-    border: solid 5px;
-    border-radius: 10px;
-    padding: 5px;
-    margin: 5px;
-}
-
-.centered{
-  display: grid;
-  place-items: center;
-  height: 100vh;
-}
-
-.social_container{
-    display: flex;
-    gap: 20px;
-
-}
-.social_container a{
-    background-color: var(--primary-color);
-    padding: 1em;
-    border-radius: 50%;
-    height: 64px;
-    width: 64px;
-    box-sizing: border-box;
-    flex-shrink: 0;
-    display: grid;
-    place-items: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-.social_container a svg{
-    height: 32px;
-    fill: var(--text-color);
-}
-
-.social_container a::before{
-    content: attr(data-social);
-    position: absolute;
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    text-decoration: none;
-    padding: 0.5em 1em;
-    border-radius: 100px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    transform: translateY(-30px) rotate(25deg);
-    opacity: 0;
-    transition: 200ms cubic-bezier(.42,0,.44,1.68);
-}
-
-.social_container a:hover{
-    background-color: var(--accent-color);
-    fill: white;
-}
-
-.social_container a:hover svg{
-    fill: white;
-}
-
-.social_container a::after{
-    content: '';
-    position: absolute;
-    height: 0;
-    width: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 10px solid var(--accent-color);
-    transform: translateY(0) rotate(25deg);
-    opacity: 0;
-    transition: 200ms cubic-bezier(.42,0,.44,1.68);
-}
-
-.social_container a:hover::before{
-    transform: translateY(-65px) rotate(0);
-    opacity: 1;
-}
-
-.social_container a:hover::after{
-    transform: translateY(-42px) rotate(0);
-    opacity: 1;
 }
