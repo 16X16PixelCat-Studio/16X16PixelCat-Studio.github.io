@@ -7,7 +7,7 @@
 .social_container a{
     background-color: var(--primary-color);
     padding: 1em;
-    border-radius: 50%;
+    border-radius: 5%;
     height: 64px;
     width: 64px;
     box-sizing: border-box;
